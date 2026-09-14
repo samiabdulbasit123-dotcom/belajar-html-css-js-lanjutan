@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latihan Destructuring Assignment — JS Lanjutan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">wpu · javascript lanjutan</div>
+  <h1>Latihan Soal — Destructuring Assignment</h1>
+  <p>5 soal fokus destructuring: array, object, nested, parameter fungsi, dan rest pattern. HTML &amp; CSS sudah jadi, isi bagian <code>// TODO</code> di script paling bawah.</p>
+</header>
+
+<nav class="filetabs">
+  <a href="#soal-array">01_array-destructuring.js</a>
+  <a href="#soal-object">02_object-destructuring.js</a>
+  <a href="#soal-nested">03_nested-destructuring.js</a>
+  <a href="#soal-param">04_destructuring-parameter.js</a>
+  <a href="#soal-rest">05_rest-pattern.js</a>
+</nav>
+
+<main>
+
+  <!-- ============ SOAL 1: ARRAY DESTRUCTURING ============ -->
+  <section class="soal" id="soal-array">
+    <div class="soal-head">
+      <div class="soal-num">1</div>
+      <h2>Swap Variabel &amp; Ambil Elemen Array</h2>
+      <span class="file-icon">array destructuring</span>
+    </div>
+    <div class="soal-body">
+      <div class="deskripsi">
+        <p>Sudah tersedia dua variabel <code>let pemainA = "Andi"</code> dan <code>let pemainB = "Budi"</code>.</p>
+        <ul>
+          <li>Tukar (swap) isi <code>pemainA</code> dan <code>pemainB</code> memakai <b>array destructuring</b> dalam satu baris (tanpa variabel bantu manual).</li>
+          <li>Dari array <code>warnaFavorit = ["Merah", "Biru", "Hijau", "Kuning", "Ungu"]</code>, ambil elemen pertama dan ketiga saja pakai destructuring (lewati elemen kedua dengan koma kosong), simpan ke variabel <code>warnaUtama</code> dan <code>warnaKetiga</code>.</li>
+          <li>Tampilkan hasil swap dan hasil pengambilan warna ke <code>#output-array</code>.</li>
+        </ul>
+      </div>
+      <span class="todo-tag">// TODO: soal-array</span>
+      <div class="playground">
+        <div class="row">
+          <button id="btn-swap">Jalankan Swap &amp; Ambil Warna</button>
+        </div>
+        <div class="output-box" id="output-array">// hasil akan tampil di sini</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOAL 2: OBJECT DESTRUCTURING ============ -->
+  <section class="soal" id="soal-object">
+    <div class="soal-head">
+      <div class="soal-num">2</div>
+      <h2>Destructuring Data Karyawan</h2>
+      <span class="file-icon">object destructuring</span>
+    </div>
+    <div class="soal-body">
+      <div class="deskripsi">
+        <p>Object <code>karyawan</code> sudah tersedia dengan properti <code>nama</code>, <code>divisi</code>, <code>gajiPokok</code> (tidak ada properti <code>bonus</code>).</p>
+        <ul>
+          <li>Ambil <code>nama</code> dan <code>divisi</code> langsung dari <code>karyawan</code> pakai object destructuring.</li>
+          <li>Ambil <code>gajiPokok</code> tapi beri <b>alias</b> menjadi <code>gaji</code> (contoh: <code>{ gajiPokok: gaji }</code>).</li>
+          <li>Ambil properti <code>bonus</code> yang <b>tidak ada</b> di object, tapi beri <b>default value</b> <code>0</code> supaya tidak <code>undefined</code>.</li>
+          <li>Tampilkan hasil ke <code>#output-object</code>.</li>
+        </ul>
+      </div>
+      <span class="todo-tag">// TODO: soal-object</span>
+      <div class="playground">
+        <div class="row">
+          <button id="btn-object">Destructure Data Karyawan</button>
+        </div>
+        <div class="output-box" id="output-object">// hasil akan tampil di sini</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOAL 3: NESTED DESTRUCTURING ============ -->
+  <section class="soal" id="soal-nested">
+    <div class="soal-head">
+      <div class="soal-num">3</div>
+      <h2>Destructuring Data Bersarang (Nested)</h2>
+      <span class="file-icon">nested destructuring</span>
+    </div>
+    <div class="soal-body">
+      <div class="deskripsi">
+        <p>Object <code>pesanan</code> sudah tersedia dengan struktur bersarang: punya properti <code>pembeli</code> (object berisi <code>nama</code> dan <code>alamat</code> yang juga object berisi <code>kota</code> &amp; <code>kodePos</code>), dan <code>items</code> (array of object produk).</p>
+        <ul>
+          <li>Ambil langsung <code>nama</code> pembeli dan <code>kota</code> dari dalam <code>pembeli.alamat</code> dalam <b>satu statement destructuring</b> (nested object destructuring).</li>
+          <li>Dari array <code>items</code>, ambil object produk <b>pertama</b> saja, lalu langsung destructure <code>namaProduk</code> dan <code>harga</code> dari situ (gabungan array + object destructuring).</li>
+          <li>Tampilkan semua hasil ke <code>#output-nested</code>.</li>
+        </ul>
+      </div>
+      <span class="todo-tag">// TODO: soal-nested</span>
+      <div class="playground">
+        <div class="row">
+          <button id="btn-nested">Destructure Data Pesanan</button>
+        </div>
+        <div class="output-box" id="output-nested">// hasil akan tampil di sini</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOAL 4: DESTRUCTURING PARAMETER FUNGSI ============ -->
+  <section class="soal" id="soal-param">
+    <div class="soal-head">
+      <div class="soal-num">4</div>
+      <h2>Destructuring pada Parameter Fungsi</h2>
+      <span class="file-icon">destructuring parameter</span>
+    </div>
+    <div class="soal-body">
+      <div class="deskripsi">
+        <p>Buat function <code>buatKartuUser({ nama, umur = 18, kota = "Tidak diketahui" })</code> yang parameternya langsung didestructure dari sebuah object, lengkap dengan <b>default value</b> untuk <code>umur</code> dan <code>kota</code>.</p>
+        <ul>
+          <li>Function harus me-return string (boleh pakai template literal) berisi ringkasan data user.</li>
+          <li>Panggil function tersebut dengan data dari form di bawah — kalau input umur atau kota dikosongkan, biarkan default value yang bekerja (jangan kirim properti itu ke object kalau kosong).</li>
+          <li>Tampilkan hasil ke <code>#user-card-output</code>.</li>
+        </ul>
+      </div>
+      <span class="todo-tag">// TODO: soal-param</span>
+      <div class="playground">
+        <div class="row">
+          <input type="text" id="input-nama-user" placeholder="Nama (wajib)">
+          <input type="number" id="input-umur-user" placeholder="Umur (opsional)">
+          <input type="text" id="input-kota-user" placeholder="Kota (opsional)">
+          <button id="btn-buat-kartu-user">Buat Kartu</button>
+        </div>
+        <div class="user-card" id="user-card-output">// kartu user akan tampil di sini</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOAL 5: REST PATTERN ============ -->
+  <section class="soal" id="soal-rest">
+    <div class="soal-head">
+      <div class="soal-num">5</div>
+      <h2>Rest Pattern dalam Destructuring</h2>
+      <span class="file-icon">rest pattern</span>
+    </div>
+    <div class="soal-body">
+      <div class="deskripsi">
+        <p>Array <code>nilaiUjian = [100, 70, 85, 90, 60, 75]</code> sudah tersedia (elemen pertama adalah nilai ujian <i>percobaan</i>, sisanya nilai ujian asli).</p>
+        <ul>
+          <li>Pisahkan elemen pertama ke variabel <code>nilaiPercobaan</code>, dan <b>sisanya</b> ke variabel <code>nilaiAsli</code> memakai <b>rest pattern</b> (<code>...nilaiAsli</code>) dalam array destructuring.</li>
+          <li>Hitung rata-rata dari <code>nilaiAsli</code> saja (jangan ikutkan nilai percobaan).</li>
+          <li>Lakukan hal serupa untuk object: dari <code>dataSiswa = { nama: "Sinta", kelas: "12A", nilaiMatematika: 95, nilaiFisika: 88, nilaiKimia: 92 }</code>, pisahkan <code>nama</code> dan <code>kelas</code> secara terpisah, lalu kumpulkan <b>sisa properti nilai</b> (mapel-mapel) ke satu object baru bernama <code>nilaiMapel</code> pakai object rest pattern.</li>
+          <li>Tampilkan semua hasil ke <code>#output-rest</code>.</li>
+        </ul>
+      </div>
+      <span class="todo-tag">// TODO: soal-rest</span>
+      <div class="playground">
+        <div class="row">
+          <button id="btn-rest">Jalankan Rest Pattern</button>
+        </div>
+        <div class="output-box" id="output-rest">// hasil akan tampil di sini</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>// akhir latihan — semua data dummy sudah disiapkan, tinggal isi bagian TODO</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+:root{
+    --bg: #1e1e2e;
+    --surface: #262638;
+    --surface-2: #2f2f45;
+    --border: #3a3a54;
+    --text: #e4e4ef;
+    --muted: #9090a8;
+    --accent: #e8b339;
+    --accent-soft: rgba(232,179,57,0.12);
+    --green: #6bcf7f;
+    --red: #e85d75;
+    --mono: 'JetBrains Mono', 'Fira Code', ui-monospace, Menlo, Consolas, monospace;
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.5;
+    padding-bottom: 80px;
+  }
+
+  header{
+    padding: 40px 24px 24px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, var(--surface), var(--bg));
+  }
+
+  header .eyebrow{
+    font-family: var(--mono);
+    color: var(--accent);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  header h1{
+    margin: 8px 0 6px;
+    font-size: clamp(22px, 4vw, 32px);
+  }
+
+  header p{
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0;
+  }
+
+  nav.filetabs{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  nav.filetabs a{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 2px solid transparent;
+  }
+  nav.filetabs a:hover{ color: var(--accent); border-bottom-color: var(--accent); }
+
+  main{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 8px 24px 40px;
+  }
+
+  section.soal{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-top: 28px;
+    overflow: hidden;
+    scroll-margin-top: 20px;
+  }
+
+  .soal-head{
+    display:flex;
+    align-items:center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .soal-num{
+    font-family: var(--mono);
+    color: var(--bg);
+    background: var(--accent);
+    width: 30px; height: 30px;
+    border-radius: 6px;
+    display:flex; align-items:center; justify-content:center;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .soal-head h2{ margin: 0; font-size: 17px; }
+  .soal-head .file-icon{ font-size: 13px; color: var(--muted); font-family: var(--mono); }
+
+  .soal-body{ padding: 20px; }
+
+  .deskripsi{ margin-bottom: 14px; }
+  .deskripsi p{ margin: 0 0 10px; }
+  .deskripsi ul{ margin: 8px 0; padding-left: 20px; color: var(--muted); }
+  .deskripsi code{
+    font-family: var(--mono);
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .todo-tag{
+    display:inline-block;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--green);
+    border: 1px dashed var(--green);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+
+  .playground{
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  button{
+    font-family: var(--sans);
+    font-size: 14px;
+    background: var(--accent);
+    color: #1e1e2e;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  button.secondary{
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  button:hover{ filter: brightness(1.08); }
+
+  .row{ display:flex; gap: 10px; flex-wrap: wrap; align-items:center; margin-bottom: 12px; }
+
+  .output-box{
+    font-family: var(--mono);
+    font-size: 13px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    min-height: 20px;
+  }
+
+  .muted{ color: var(--muted); }
+
+  /* soal 1: swap & ambil elemen array */
+  #swap-before, #swap-after{ font-family: var(--mono); }
+
+  /* soal 4: kartu user hasil destructuring parameter */
+  .user-card{
+    background: var(--surface-2);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 10px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+
+  footer{
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+    color: var(--muted);
+    font-size: 13px;
+    font-family: var(--mono);
+  }
